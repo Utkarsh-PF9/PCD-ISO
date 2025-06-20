@@ -1,14 +1,16 @@
 #!/bin/bash
 
 # Check if Python3 is available
-if ! command -v python3 &> /dev/null; then
-    echo "Python3 is required but not installed."
-    echo "Installing Python3..."
-    sudo apt update && sudo apt install -y python3
-fi
+# if ! command -v python3 &> /dev/null; then
+#     echo "Python3 is required but not installed."
+#     echo "Installing Python3..."
+#     sudo apt update && sudo apt install -y python3
+# fi
 
 # Run the Python curses interface
-python3 /usr/local/bin/custom-ui.py
+# python3 /usr/local/bin/custom-ui.py
+sudo apt update
+./usr/local/bin/pcd-iso-ui
 
 # After Python script exits, we're back in the shell
 echo "Custom UI has exited."
